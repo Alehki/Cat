@@ -1,0 +1,157 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh;
+}
+
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .orejas{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.oreja{
+    width: 130px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.oreja-1{
+    border-radius: 16% 84% 49% 51% / 59% 65% 35% 41%  ;
+}
+
+.oreja-2{
+    border-radius: 84% 16% 51% 49% / 65% 59% 41% 35%;
+}
+
+.oreja-1::after{
+    content: "";
+    width: 80px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    background-color: black;
+    border-radius: 100% 0% 49% 51% / 100% 65% 35% 0% ;
+}
+
+.oreja-2::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    border-radius: 0% 100% 51% 49% / 65% 100% 0% 35% ;
+} */
+
+.ojos{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ojo{
+    width: 150px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50% / 66% 67% 33% 34% ;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ojo-1::after,
+.ojo-2::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50% / 66% 67% 33% 34% ;
+    transform: translateY(-90px);
+    background-color: black;
+}
+
+.ojo-1.active::after,
+.ojo-2.active::after{
+    animation: pupi .2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes pupi {
+    0%{
+        transform: translateY(-90px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-90px);
+    }
+}
+
+.pupila{
+    content: "";
+    position: absolute;
+    border-radius: 50% 50% 50% 50% / 52% 53% 47% 48% ;
+    width: 10px;
+    height: 25px;
+    background-color: black;
+    transform: translateX(0)
+}
+
+.pupila.active{
+    animation: moveEyes 2s;
+    animation-iteration-count: 1;
+}
+
+.pupila::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    right: -3px;
+    top: 4px;
+    background-color: white;
+}
+
+@keyframes moveEyes {
+    0%{
+        transform: translateX(0);
+    }
+    
+    25%{
+        transform: translateX(25px);
+    }
+    
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateX(0);
+    } 
+}
+
+.mouse{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50% 50% 50% 50% / 30% 28% 72% 70%;
+    transform: translateY(90px);
+}
